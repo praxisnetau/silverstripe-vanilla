@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://i.imgur.com/dse0Sax.png" target="_blank">
-    <img src="https://i.imgur.com/dse0Sax.png" width="600" height="450" alt="Vanilla">
+    <img src="https://i.imgur.com/dse0Sax.png" alt="Vanilla">
   </a>
 </p>
 
