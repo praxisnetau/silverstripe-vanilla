@@ -1,0 +1,169 @@
+/* Layout Styles
+===================================================================================================================== */
+
+body {
+  
+  > header {
+    
+    nav.navbar {
+      
+      a {
+        
+        transition: color 0.25s, background 0.25s;
+        
+        &.nav-link {
+          text-transform: uppercase;
+        }
+        
+        &.navbar-brand {
+          color: $navbar-brand-color;
+        }
+        
+      }
+      
+    }
+    
+  }
+  
+  > main {
+    padding: $main-padding 0;
+    background: $main-bg;
+  }
+  
+  > footer {
+    
+    color: $footer-color;
+    padding: $footer-padding 0;
+    font-size: $font-size-sm;
+    
+    a {
+      color: $footer-link-color;
+    }
+    
+    div.footer-links {
+      
+      margin-bottom: $spacer-half;
+      
+      > a.home-link {
+        font-weight: $font-weight-bold;
+      }
+      
+      > i.fa {
+        display: none;
+        color: $gray-500;
+        padding: 0 $spacer-half;
+        line-height: $line-height-base;
+      }
+      
+      > nav.footer {
+        
+        ul {
+          
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-wrap: wrap;
+          list-style: none;
+          
+          li + li:before {
+            content: "/";
+            padding: 0 $spacer-half;
+            display: inline-block;
+          }
+          
+        }
+        
+      }
+      
+    }
+    
+    div.footer-credits {
+      
+      > div.powered {
+        
+        display: flex;
+        flex-wrap: wrap;
+        
+        span.text {
+          margin-right: $spacer-half;
+        }
+        
+        span.logo {
+          
+          a {
+            width: 24px;
+            height: 24px;
+            display: block;
+          }
+          
+          svg {
+            
+            width: 24px;
+            height: 24px;
+            
+            path.ss-logo {
+              fill: $footer-color;
+              transition: fill 0.25s;
+            }
+            
+          }
+          
+          a {
+            
+            @include hover-focus {
+              
+              svg > path.ss-logo {
+                fill: $primary;
+              }
+              
+            }
+            
+          }
+          
+        }
+        
+      }
+      
+    }
+    
+  }
+  
+}
+
+// Media Queries:
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+  
+  body {
+    
+    > footer {
+      
+      div.footer-links {
+        
+        margin-bottom: 0;
+        
+        > i.fa {
+          display: block;
+        }
+        
+      }
+      
+      div.footer-credits {
+        
+        > div.powered {
+          
+          &:before {
+            content: "/";
+            padding: 0 $spacer-half;
+            display: inline-block;
+          }
+          
+        }
+        
+      }
+      
+    }
+    
+  }
+  
+}

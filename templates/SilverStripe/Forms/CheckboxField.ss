@@ -1,0 +1,1 @@
+<input class="form-check-input<% if $extraClass %> $extraClass<% end_if %>" $getAttributesHTML('class') />

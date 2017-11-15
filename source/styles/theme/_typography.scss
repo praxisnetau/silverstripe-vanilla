@@ -1,0 +1,359 @@
+/* Typography Styles
+===================================================================================================================== */
+
+// Typography Styles:
+
+.typography {
+  
+  // Font Styles:
+  
+  font-family: $font-family-base;
+  
+  // Link Styles:
+  
+  a {
+    
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+    
+    &.btn:hover,
+    &.page-link:hover {
+      text-decoration: none;
+    }
+    
+  }
+  
+  // Formatting Styles:
+  
+  i, em {
+    font-style: italic;
+  }
+  
+  b, strong {
+    font-weight: $font-weight-bold;
+  }
+  
+  // Alignment Styles:
+  
+  .left {
+    text-align: left;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .right {
+    text-align: right;
+  }
+  
+  .justify {
+    text-align: justify;
+  }
+  
+  // Paragraph Styles:
+  
+  p {
+    margin-bottom: $spacer;
+  }
+  
+  // Preformatted Text Styles:
+  
+  pre {
+    margin-bottom: $spacer;
+  }
+  
+  // Table Styles:
+  
+  table {
+    margin-bottom: $spacer;
+  }
+  
+  // Address Styles:
+  
+  address {
+    font-style: italic;
+    margin-bottom: $spacer;
+  }
+  
+  // Blockquote Styles:
+  
+  blockquote {
+    clear: both;
+    margin: 0 $spacer $spacer;
+    padding: 0 $spacer;
+    border-left: 2px solid $gray-200;
+  }
+  
+  // List Styles:
+  
+  ul, ol, dl {
+    padding: 0 0 0 $spacer-double;
+    margin-bottom: $spacer;
+  }
+  
+  // Unordered List Styles:
+  
+  ul {
+    
+    list-style: $ul-style-type;
+    
+    ul, ol {
+      margin-bottom: 0;
+    }
+    
+    li {
+      margin: 0;
+    }
+    
+    &.pagination {
+      clear: both;
+      margin: $spacer 0;
+      list-style: none;
+      padding-left: 0;
+    }
+    
+  }
+  
+  // Ordered List Styles:
+  
+  ol {
+    
+    list-style: $ol-style-type;
+    
+    ul, ol {
+      margin-bottom: 0;
+    }
+    
+    li {
+      margin-bottom: 0;
+    }
+    
+  }
+  
+  // Description List Styles:
+  
+  dl {
+    
+    dt {
+      font-weight: $font-weight-bold;
+    }
+    
+    dd {
+      margin-bottom: $spacer-half;
+    }
+    
+  }
+  
+  // Titled Abbreviation Styles:
+  
+  abbr[title] {
+    cursor: help;
+    text-decoration: none;
+    border-bottom: 1px dotted $gray-600;
+  }
+  
+  // Horizontal Rule Styles:
+  
+  hr {
+    clear: both;
+  }
+  
+  // Image Styles:
+  
+  img {
+    height: auto;
+    display: block;
+    max-width: 100%;
+    margin: $spacer-half 0 $spacer;
+  }
+  
+  // Image Link Styles:
+  
+  .image, .captionImage {
+    
+    > a {
+      display: block;
+    }
+    
+  }
+  
+  // Caption Image Styles:
+  
+  .captionImage {
+    
+    max-width: 100%;
+    margin-top: $spacer;
+    margin-bottom: 0 !important;
+    
+    // Image Margins:
+    
+    img {
+      margin: 0;
+    }
+    
+    // Caption Text:
+    
+    p.caption, div.caption > p {
+      clear: both;
+      color: $gray-600;
+      text-align: left;
+      font-style: italic;
+      margin: $spacer-half 0 $spacer;
+    }
+    
+  }
+  
+  // Font Awesome Styles:
+  
+  .fa {
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  .fa-ul {
+    
+    margin: 0 0 $spacer 0;
+    padding: 0 0 0 $spacer-double;
+    list-style: none;
+    
+    .fa-ul {
+      margin-bottom: 0;
+    }
+    
+  }
+  
+  .fa-li {
+    top: 0;
+    left: (-$spacer-double);
+    width: $spacer-double;
+    line-height: $line-height-base;
+  }
+  
+  // Code Direction Styles (for obfuscating email addresses):
+  
+  .codedirection {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+  }
+  
+}
+
+// Media Queries:
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+  
+  // Image Styles:
+  
+  img {
+    
+    // Left Aligned:
+    
+    &.left {
+      float: left;
+      max-width: 50%;
+      margin: $spacer-half $spacer-double $spacer 0;
+    }
+    
+    // Right Aligned:
+    
+    &.right {
+      float: right;
+      max-width: 50%;
+      margin: $spacer-half 0 $spacer $spacer-double;
+    }
+    
+    // Centered:
+    
+    &.center {
+      float: none;
+      clear: both;
+      margin: $spacer-half auto $spacer;
+    }
+    
+    // Left Alone:
+    
+    &.leftAlone {
+      float: left;
+      clear: both;
+      margin: 0 100% $spacer 0;
+    }
+    
+  }
+  
+  // Caption Image Styles:
+  
+  .captionImage {
+    
+    // Left Aligned:
+    
+    &.left {
+      
+      float: left;
+      max-width: 50%;
+      margin: $spacer-half $spacer-double 0 0;
+      
+      img {
+        float: none;
+        width: 100%;
+        max-width: none;
+      }
+      
+    }
+    
+    // Right Aligned:
+    
+    &.right {
+      
+      float: right;
+      max-width: 50%;
+      margin: $spacer-half 0 0 $spacer-double;
+      
+      img {
+        float: none;
+        width: 100%;
+        max-width: none;
+      }
+      
+    }
+    
+    // Centered:
+    
+    &.center {
+      
+      margin: $spacer auto 0;
+      
+      img {
+        margin: 0 auto;
+      }
+      
+      p.caption, div.caption > p {
+        text-align: center;
+      }
+      
+    }
+    
+    // Left Alone:
+    
+    &.leftAlone {
+      
+      display: table;
+      
+      img {
+        float: none;
+        display: table-row;
+      }
+      
+      p.caption, div.caption {
+        display: table-caption;
+        caption-side: bottom;
+      }
+      
+    }
+    
+  }
+  
+}

@@ -1,0 +1,82 @@
+{
+  "name": "silverstripe-vanilla",
+  "version": "1.0.0",
+  "description": "An alternative default theme for SilverStripe.",
+  "homepage": "https://github.com/praxisnetau/silverstripe-vanilla",
+  "keywords": [
+    "silverstripe",
+    "vanilla",
+    "theme"
+  ],
+  "license": "BSD-3-Clause",
+  "author": "Praxis Interactive",
+  "contributors": [
+    {
+      "name": "Colin Tucker",
+      "email": "colin@praxis.net.au",
+      "url": "http://www.praxis.net.au"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/praxisnetau/silverstripe-vanilla.git"
+  },
+  "bugs": {
+    "url": "https://github.com/praxisnetau/silverstripe-vanilla/issues"
+  },
+  "engines": {
+    "node": "^6.x"
+  },
+  "scripts": {
+    "start": "node webpack.server.js",
+    "watch": "webpack --env.development --colors --watch",
+    "build": "webpack --env.production --colors --optimize-minimize"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.7"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "bootstrap": "^4.0.0-beta.2",
+    "bootstrap-loader": "^2.2.0",
+    "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "^0.28.7",
+    "exports-loader": "^0.6.4",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "font-awesome": "^4.7.0",
+    "json-loader": "^0.5.7",
+    "modernizr": "^3.5.0",
+    "modernizr-loader": "^1.0.1",
+    "node-sass": "^4.6.1",
+    "postcss-loader": "^2.0.8",
+    "resolve-url-loader": "^2.2.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "svgo": "^1.0.2",
+    "svgo-loader": "^2.0.0",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4",
+    "webpack-module-hot-accept": "^1.0.5",
+    "yaml-loader": "^0.5.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "modules": false
+        }
+      ]
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}

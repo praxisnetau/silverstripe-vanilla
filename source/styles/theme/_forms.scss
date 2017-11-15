@@ -1,0 +1,58 @@
+/* Form Styles
+===================================================================================================================== */
+
+// Button Styles:
+
+.btn-primary {
+  color: $input-btn-primary-color;
+}
+
+// Message Styles:
+
+form {
+  
+  .message {
+    
+    position: relative;
+    padding: $alert-padding-y $alert-padding-x;
+    margin-bottom: $alert-margin-bottom;
+    border: $alert-border-width solid transparent;
+    
+    @include border-radius($alert-border-radius);
+    
+    @each $message, $alert in $message-alerts {
+      &.#{$message} {
+        @include alert-variant(theme-color-level($alert, -10), theme-color-level($alert, -9), theme-color-level($alert, 6));
+      }
+    }
+    
+  }
+  
+}
+
+// Login Form Styles:
+
+#MemberLoginForm_LoginForm {
+  
+  div.actions {
+    margin: $spacer-half 0 0;
+  }
+  
+  #ForgotPassword {
+    
+    margin: $spacer 0 0;
+    
+    &:before {
+      color: $gray-500;
+      content: '\f071'; // fa-exclamation-triangle 
+      font-family: 'FontAwesome';
+      margin-right: $spacer-quarter;
+    }
+    
+    a {
+      color: $gray-600;
+    }
+    
+  }
+  
+}

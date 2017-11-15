@@ -1,0 +1,20 @@
+### Thumbnails ###
+._*
+Thumbs.db
+
+### Folder Config ###
+.DS_Store
+Desktop.ini
+
+### Log Files ###
+*.log
+
+### Node.js Packages ###
+/**/node_modules
+
+### Sass Cache ###
+.sass-cache
+
+### Source Maps ###
+/**/*.js.map
+/**/*.css.map

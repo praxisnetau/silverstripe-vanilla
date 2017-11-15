@@ -1,0 +1,194 @@
+/* Theme Variables
+===================================================================================================================== */
+
+// Spacers:
+
+$spacer: 1rem;
+
+$spacer-quarter: ($spacer * .25);
+$spacer-half:    ($spacer * .5);
+$spacer-ample:   ($spacer * 1.5);
+$spacer-double:  ($spacer * 2);
+$spacer-triple:  ($spacer * 3);
+
+$spacers: (
+  0: 0,
+  1: $spacer-quarter,
+  2: $spacer-half,
+  3: $spacer,
+  4: $spacer-ample,
+  5: $spacer-triple
+);
+
+// Grid:
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+);
+
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+
+// Colors:
+
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #868e96;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+$blue:    #007bff;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #e83e8c;
+$red:     #dc3545;
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+$green:   #28a745;
+$teal:    #20c997;
+$cyan:    #17a2b8;
+
+$ss-light: #44c8f5;
+$ss-dark:  #14324b;
+
+$primary:   $ss-light;
+$secondary: $gray-600;
+$success:   $green;
+$info:      $cyan;
+$warning:   $yellow;
+$danger:    $red;
+$light:     $gray-100;
+$dark:      $gray-800;
+
+// Theme Colors:
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  success: $success,
+  info: $info,
+  warning: $warning,
+  danger: $danger,
+  light: $light,
+  dark: $dark,
+  ss-light: $ss-light,
+  ss-dark: $ss-dark
+);
+
+// Options:
+
+$enable-caret:             true;
+$enable-rounded:           false;
+$enable-shadows:           false;
+$enable-gradients:         false;
+$enable-transitions:       true;
+$enable-hover-media-query: false;
+$enable-grid-classes:      true;
+$enable-print-styles:      true;
+
+// Body:
+
+$body-bg:    $gray-200;
+$body-color: $gray-800;
+
+// Breadcrumbs:
+
+$breadcrumb-padding-y:     0.75rem;
+$breadcrumb-padding-x:     1rem;
+$breadcrumb-item-padding:  0.5rem;
+
+$breadcrumb-margin-bottom: 1rem;
+
+$breadcrumb-bg:            lighten($gray-200, 3%);
+$breadcrumb-divider-color: $gray-600;
+$breadcrumb-active-color:  $gray-600;
+
+$breadcrumb-divider:       "/";
+
+// Buttons:
+
+$input-btn-primary-color: $white;
+
+// Main:
+
+$main-bg: $white;
+$main-padding: $spacer;
+
+// Footer:
+
+$footer-color:      $gray-600;
+$footer-padding:    $spacer;
+$footer-link-color: inherit;
+
+// Fonts:
+
+$font-family-sans-serif: Roboto, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:  Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-base:       $font-family-sans-serif;
+
+$font-size-base: 1rem;
+$font-size-lg:   1.25rem;
+$font-size-sm:   .875rem;
+
+$font-weight-light:  300;
+$font-weight-normal: 400;
+$font-weight-bold:   500;
+
+$font-weight-base: $font-weight-normal;
+$line-height-base: 1.6;
+
+// Headings:
+
+$h1-font-size: $font-size-base * 3;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base !default;
+
+$headings-margin-bottom: $spacer;
+$headings-font-family:   inherit;
+$headings-font-weight:   $font-weight-light;
+$headings-line-height:   1.2;
+$headings-color:         $gray-700;
+
+// Lists:
+
+$ul-style-type: square;
+$ol-style-type: decimal;
+
+// Messages:
+
+$message-alerts: (
+  bad: 'danger',
+  good: 'success',
+  info: 'info',
+  error: 'danger',
+  warning: 'warning'
+);
+
+// Navbar:
+
+$navbar-brand-color: $white;
+$navbar-dark-active-color: $primary;
+
+// Sidebar:
+
+$sidebar-headings-color: $gray-600;

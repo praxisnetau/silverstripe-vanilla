@@ -1,0 +1,1 @@
+<% if $Type == 'good' %> has-success<% else_if $Type == 'warning' %> has-warning<% else_if $Type == 'error' %> has-danger<% end_if %>

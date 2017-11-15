@@ -1,0 +1,42 @@
+/* Sidebar Styles
+===================================================================================================================== */
+
+aside.sidebar {
+  
+  padding-top: $spacer;
+  
+  h3 {
+    color: $sidebar-headings-color;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-normal;
+    text-transform: uppercase;
+    border-bottom: $border-width solid $border-color;
+    padding-bottom: $spacer-half;
+  }
+  
+  a {
+    color: inherit;
+  }
+  
+  nav.secondary {
+    
+    font-size: $font-size-sm;
+    
+    ul {
+      
+      margin-left: $spacer-ample;
+      
+      li > i.fa {
+        top: 0;
+        line-height: $line-height-base;
+      }
+      
+      li.current > a {
+        font-weight: $font-weight-bold;
+      }
+      
+    }
+    
+  }
+  
+}
