@@ -14,6 +14,8 @@ An alternative default theme for SilverStripe v4, based upon:
 - [Font Awesome][font-awesome]
 - [Modernizr][modernizr]
 
+Also includes responsive typography styles, and form field template overrides to use Bootstrap form styles.
+
 ## Contents
 
 - [Requirements](#requirements)
@@ -58,20 +60,68 @@ SilverStripe\View\SSViewer:
 
 ## Usage
 
-Once your theme dependencies are installed, execute the following to start the webpack development server:
+This theme includes three modes for working with your source files:
 
+```sh
+$ yarn watch  # monitors source files for changes and rebuilds automatically
+$ yarn build  # prepares JS/CSS bundles for deployment to production server
+$ yarn start  # runs webpack-dev-server to automatically update browser
 ```
+### Watch
+
+Using this mode, your source files will be monitored for changes and your
+theme bundles will be automatically rebuilt when a change is detected:
+
+```sh
+$ yarn watch
+```
+
+Note that when using this mode, you will need to manually refresh your
+browser to see the changes.
+
+### Build
+
+When your theme is ready to be deployed to production, you can run `build`
+to prepare your JS/CSS bundles. Webpack will optimise and minify the bundles
+accordingly:
+
+```sh
+$ yarn build
+```
+
+### Start
+
+In this mode, `webpack-dev-server` will be started to monitor your
+source files changes and will automatically update the browser without the need
+to refresh the page:
+
+```sh
 $ yarn start
 ```
 
-The theme should now compile with hot module reloading enabled, allowing the browser to automatically reload
-and update your styles as you make changes to the theme SASS.
+This mode is a little trickier to get working than the others. In order
+to make use of this mode, you need to inform SilverStripe to
+load the theme bundles from the development server, which by default
+runs at `http://localhost:8080`.
 
-To prepare your theme for production, execute the following:
+Open the `templates/Page.ss` file, and look for these lines:
 
 ```
-$ yarn build
+<% require themedCSS('production/styles/bundle') %>
+<%-- require css('http://localhost:8080/production/styles/bundle.css') --%>
+
+<% require themedJavascript('production/js/bundle') %>
+<%-- require javascript('http://localhost:8080/production/js/bundle.js') --%>
 ```
+
+To use the development server, you'll need to uncomment the `http://localhost:8080` lines and
+comment out the `themedCSS` and `themedJavascript` lines.
+
+When your theme is ready for production, you'll need to `build` the bundles and revert back to the
+the `themedCSS` and `themedJavascript` lines.
+
+You can make this whole process automatic with some logic added to your
+`PageController` class, but that goes beyond the scope of this repo!
 
 ## Issues
 
