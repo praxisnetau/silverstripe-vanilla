@@ -18,7 +18,7 @@ const PATHS = {
   DIST: path.resolve(__dirname, 'production'),
   BUNDLES: path.resolve(__dirname, 'source/bundles'),
   MODULES: path.resolve(__dirname, 'node_modules'),
-  PUBLIC: '/themes/vanilla/production/'
+  PUBLIC: '/resources/themes/vanilla/production/'
 };
 
 // Configure Development Server:
