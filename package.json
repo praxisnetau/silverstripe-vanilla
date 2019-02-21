@@ -25,7 +25,7 @@
     "url": "https://github.com/praxisnetau/silverstripe-vanilla/issues"
   },
   "engines": {
-    "node": "^6.x"
+    "node": ">=6.x"
   },
   "scripts": {
     "start": "node webpack.server.js",
