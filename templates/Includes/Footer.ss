@@ -21,7 +21,7 @@
           </div>
           <div class="powered">
             <span class="text">
-              Sponsored by <a href="https://www.sunnysideup.co.nz/">Sunny Side Up</a>
+            Supported by <a href="https://www.sunnysideup.co.nz/">Sunny Side Up</a>
             </span>
           </div>
         </div>

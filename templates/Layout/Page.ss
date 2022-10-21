@@ -4,6 +4,7 @@
       <h1>$Title</h1>
     </header>
     <div class="content">
+      $ElementalArea
       $Content
     </div>
     <% if $Form %>
@@ -13,4 +14,3 @@
     <% end_if %>
   </article>
 </div>
- 

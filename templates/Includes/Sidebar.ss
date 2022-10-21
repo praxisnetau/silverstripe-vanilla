@@ -1,4 +1,16 @@
 <aside class="col-md-3 sidebar">
+  <p>
+
+  <% if $IsCurrentUser %>
+  <a href="$LogoutLink" class="btn btn-primary" role="button">Log out</a>
+  <% else %>
+  <a href="$LoginLink" class="btn btn-primary" role="button">Log in</a>
+  <% end_if %>
+  <% if $IsAdmin %>
+  <a href="$CMSEditLink" class="btn btn-danger" role="button">Edit this page</a>
+  <% end_if %>
+  </p>
+
   <% if $Menu(2) %>
     <nav class="secondary">
       <% with $Level(1) %>
@@ -8,15 +20,6 @@
     </nav>
   <% end_if %>
 
-  <% if IsCalenderPage %>
-  <p class="event-calendar-feed"><a href="$Link(rss)"><% _t('UncleCheese\EventCalendar\Pages\Calendar.SUBSCRIBE', 'Calendar RSS Feed') %></a></p>
-
-  <div class="event-calendar-controls">
-  	$CalendarWidget
-  	<% include UncleCheese\EventCalendar\Includes\MonthJumper %>
-  	<% include UncleCheese\EventCalendar\Includes\QuickNav %>
-  </div>
-
-  <% end_if %>
+  <% include UncleCheese\EventCalendar\Includes\CalendarNav %>
 
 </aside>
