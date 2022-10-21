@@ -1,7 +1,12 @@
 /* generic */
-.btn {border-radius: 5px;}
+
 a {color: #dc3d24;}
 
+
+/* ### header */
+.navbar {
+  background-image: url('../images/bg.png');
+}
 
 /* ### main */
 main {
@@ -10,6 +15,7 @@ main {
 
 
 /* ### side bar */
+aside .btn {border-radius: 5px; display: inline-block; width: auto; margin: 10px;}
 .login-buttons {
   text-align: center;
   background-color: #e9ecef;

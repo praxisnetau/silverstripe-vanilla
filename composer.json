@@ -27,7 +27,8 @@
     "installer-name": "vanilla",
     "expose": [
       "production",
-      "css"
+      "css",
+      "images"
     ]
   },
   "minimum-stability": "dev",
