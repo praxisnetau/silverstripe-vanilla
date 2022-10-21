@@ -12,6 +12,7 @@
 <% end_if %>
 
 <div class="event-calendar-controls">
+  <h3>BROWSE OUR EVENTS</h3>
   $CalendarWidget
   <% include UncleCheese\EventCalendar\Includes\MonthJumper %>
 </div>

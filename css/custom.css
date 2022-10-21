@@ -11,6 +11,9 @@ main {
 
 /* ### side bar */
 .login-buttons {
-  text-align: right;
+  text-align: center;
+  background-color: #e9ecef;
+  padding: 1rem;
+  margin-bottom: 2rem;
 }
 #Form_ProfileForm_Password_Holder .d-none {display: block!important;}
