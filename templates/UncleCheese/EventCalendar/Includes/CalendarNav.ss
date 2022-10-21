@@ -1,5 +1,4 @@
 <% if $IsCalendarPage %>
-<p class="event-calendar-feed"><a href="$Link(rss)"><% _t('UncleCheese\EventCalendar\Pages\Calendar.SUBSCRIBE', 'Calendar RSS Feed') %></a></p>
 
 <% if $RegionsWithEvents %>
 <h3>JUMP TO A REGION</h3>
@@ -23,4 +22,6 @@
   .event-calendar-month-jumper .actions {width: 19%!important; display: inline-block;}
 </style>
 
+
+<p class="event-calendar-feed"><a href="$Link(rss)"><% _t('UncleCheese\EventCalendar\Pages\Calendar.SUBSCRIBE', 'Calendar RSS Feed') %></a></p>
 <% end_if %>

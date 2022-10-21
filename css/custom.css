@@ -1,4 +1,16 @@
-#Form_ProfileForm_Password_Holder .d-none {display: block!important;}
-
+/* generic */
 .btn {border-radius: 5px;}
 a {color: #dc3d24;}
+
+
+/* ### main */
+main {
+  min-height: calc(100vh - 200px);
+}
+
+
+/* ### side bar */
+.login-buttons {
+  text-align: right;
+}
+#Form_ProfileForm_Password_Holder .d-none {display: block!important;}
