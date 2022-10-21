@@ -26,8 +26,9 @@
     },
     "installer-name": "vanilla",
     "expose": [
-            "production"
-        ]
+      "production",
+      "css"
+    ]
   },
   "minimum-stability": "dev",
   "prefer-stable": true

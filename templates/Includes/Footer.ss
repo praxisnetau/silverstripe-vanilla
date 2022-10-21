@@ -17,14 +17,11 @@
       <div class="col-md">
         <div class="footer-credits d-flex flex-column align-items-center align-items-lg-stretch justify-content-lg-end flex-lg-row">
           <div class="theme">
-            Theme by <a href="http://www.praxis.net.au" rel="nofollow">Praxis Interactive</a>
+            Theme by Praxis Interactive
           </div>
           <div class="powered">
             <span class="text">
-              Powered by <a href="https://www.silverstripe.org" rel="nofollow">SilverStripe</a>
-            </span>
-            <span class="logo">
-              <% include Footer\Logo %>
+              Sponsored by <a href="https://www.sunnysideup.co.nz/">Sunny Side Up</a>
             </span>
           </div>
         </div>
