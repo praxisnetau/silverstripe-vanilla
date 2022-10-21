@@ -2,12 +2,9 @@
 
 <html class="no-js" lang="$ContentLocale">
   <head>
-    <% base_tag %>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    $MetaTags(false)<title>$Title &ndash; $SiteConfig.Title</title>
+    $MetaTagsExtended
     <% require themedCSS('production/styles/bundle') %>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <%-- require css('http://localhost:8080/production/styles/bundle.css') --%>
   </head>
   <body>
