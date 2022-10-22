@@ -2,7 +2,7 @@
 const spreadsheetID='AIzaSyDtRoZA6wazwP5cIdwkE7MqGOgksYR2LoY'
 
 // Make sure it is public or set to Anyone with link can view
-const url='https://sheets.googleapis.com/v4/spreadsheets/1Yg6XsC5k4eF0zYxteOPqtk5Bfjgh3kvU26LbN_I_NNk/values/Dealers!A1:M1000?key=' + spreadsheetID
+const url='https://sheets.googleapis.com/v4/spreadsheets/1Yg6XsC5k4eF0zYxteOPqtk5Bfjgh3kvU26LbN_I_NNk/values/Equipment!A1:M1000?key=' + spreadsheetID
 
 const dealers=[]
 
@@ -13,7 +13,6 @@ const dealers=[]
 $.getJSON(url,
 
   function (data) {
-    // console.log(data)
     const rows=data.values
 
     const regions=[]
@@ -23,14 +22,11 @@ $.getJSON(url,
     for (const index in rows) {
       const obj={}
       const row=rows[index]
-      // console.log(index);
       if (parseInt(index) === 0) {
         for (let col=0; col < row.length; col++) {
           colIndex[row[col]]=col
         }
       }
-      // console.log(row)
-      // console.log(colIndex)
       const approved=row[colIndex.Approved].trim().toUpperCase().charAt(0) === 'Y'
 
       if (approved) {
@@ -39,12 +35,12 @@ $.getJSON(url,
         obj.phone=row[colIndex.Phone]?.trim()
         obj.website=row[colIndex.Website].trim()
         obj.email=row[colIndex['Email Address']].trim()
-        obj.imagelink=row[colIndex['Link to company logo']].trim()
+        // not listed in equipment
+        obj.adlink=row[colIndex['Link to company logo']].trim()
         obj.contactname=row[colIndex['Contact Name']].trim()
-        obj.adlink=row[colIndex['Link to advertisement']].trim()
-        obj.showad=row[colIndex['Show Ad']].trim()
         obj.region=row[colIndex.Region].trim()
         obj.description=row[colIndex['Short Description']].trim()
+        obj.showad='Y'
         dealers.push(obj)
 
         if ($.inArray(obj.region, regions) == -1) {
@@ -87,8 +83,8 @@ function displayRegionDealers () {
       region == '' ||
         (
           dealer.region.trim() != '' &&
-          dealer.region.trim() == region &&
-          dealer.region.trim() != 'Nationwide'
+            dealer.region.trim() == region &&
+            dealer.region.trim() != 'Nationwide'
         )
     ) {
       regionDealers.push(dealer)
@@ -114,7 +110,7 @@ function sortByAdvert (allDealers) {
   const dealersWithAd=[]
   for (index in allDealers) {
     dealer=allDealers[index]
-    if (dealer.showad.trim().toUpperCase().charAt(0) == 'Y') {
+    if (1 === 1 || dealer.showad.trim().toUpperCase().charAt(0) == 'Y') {
       dealersWithAd.push(dealer)
     } else {
       dealersNoAd.push(dealer)
@@ -134,7 +130,7 @@ function displayDealers (dealers) {
   for (index in dealers) {
     dealer=dealers[index]
 
-    html += '<li class="dealertitle"> <h3>'
+    html += '<li class="dealertitle" > <h3>'
 
     if (dealer.website.trim() != '') {
       site=dealer.website.trim().toLowerCase()
@@ -221,7 +217,7 @@ function displayDealers (dealers) {
 function dealerAdvert (dealer) {
   let advertLink=dealer.adlink
 
-  if (advertLink.match(/https?:\/\//) == null) {
+  if (advertLink && advertLink.match(/https?:\/\//) == null) {
     advertLink='http://' + advertLink
   }
 
