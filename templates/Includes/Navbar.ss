@@ -4,11 +4,6 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="NavbarNav">
-    <% if $SiteConfig.Tagline %>
-      <span class="navbar-text">
-        $SiteConfig.Tagline
-      </span>
-    <% end_if %>
     <ul class="navbar-nav ml-auto">
       <% loop $Menu(1) %>
         <li class="nav-item<% if $LinkingMode != 'link' %> active<% end_if %><% if $Children %> dropdown<% end_if %>">
@@ -21,7 +16,7 @@
                   <% if $LinkingMode == 'current' %>
                     <span class="sr-only">(current)</span>
                   <% end_if %>
-                </a> 
+                </a>
               <% end_loop %>
             </div>
           <% else %>

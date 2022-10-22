@@ -4,11 +4,36 @@ a {color: #dc3d24;}
 
 
 /* ### header */
-.navbar {
-  background-image: url('../images/bg.png');
+body > header:first-child  {
+  background-image: url('../images/bg.gif');
+}
+body > header:first-child .navbar-brand {
+  background-image: url('../images/logo.png');
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: 60px;
+  background-repeat: no-repeat;
+  text-indent: -10000px;
+  background-size: contain;
+  margin-top: 1rem;
+}
+.navbar-dark .navbar-nav .active>.nav-link  {
+  color: #dc3d24;
 }
 
 /* ### main */
+.website-title {
+  font-size: calc(0.4rem + 1.5vw);
+  background-color: #dc3d24;
+  text-align: left;
+  border-bottom: 1px solid #dc3d24;
+  margin-bottom: 3rem;
+  margin-top: -1.7rem;
+  padding: 0.5rem;
+  color: #fff;
+  text-align: center;
+}
 main {
   min-height: calc(100vh - 200px);
 }

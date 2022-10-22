@@ -3,7 +3,7 @@
     <% if $IsCurrentUser %>
     <a href="$LogoutLink" class="btn btn-primary" role="button">Log out</a>
     <% else %>
-    <a href="$RegisterLink" class="btn btn-primary" role="button">Become a member</a>
+    <a href="$RegisterLink" class="btn btn-primary" role="button">Join us</a>
     <a href="$LoginLink" class="btn btn-secondary" role="button">Log in</a>
     <% end_if %>
     <% if $IsAdmin %>

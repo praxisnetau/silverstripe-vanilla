@@ -1,3 +1,5 @@
+<div class="website-title"><i class="fa-solid fa-car-side-bolt"></i>$SiteConfig.Title - $SiteConfig.Tagline</div>
+<% if $IsNotTopLevelPage %>
 <% if $Pages %>
   <nav aria-label="breadcrumb" role="navigation">
     <ol class="breadcrumb">
@@ -14,4 +16,5 @@
       <% end_loop %>
     </ol>
   </nav>
+<% end_if %>
 <% end_if %>
