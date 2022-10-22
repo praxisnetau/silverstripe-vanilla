@@ -21,18 +21,30 @@ body > header:first-child .navbar-brand {
 .navbar-dark .navbar-nav .active>.nav-link  {
   color: #dc3d24;
 }
+.navbar-dark .navbar-nav .nav-link:hover  {
+  color: #fff;
+}
 
 /* ### main */
 .website-title {
   font-size: calc(0.4rem + 1.5vw);
   background-color: #dc3d24;
   text-align: left;
-  border-bottom: 1px solid #dc3d24;
   margin-bottom: 3rem;
-  margin-top: -1.7rem;
+  margin-top: -1.9rem;
   padding: 0.5rem;
   color: #fff;
   text-align: center;
+  border-radius: 0.5rem;
+  line-height: 1.3;
+}
+.website-title span {
+  display: block;
+  font-size: 1rem;
+  border-top: 1px solid white;
+  width: 300px;
+  margin: 0 auto;
+  padding: 5px;
 }
 main {
   min-height: calc(100vh - 200px);
@@ -40,11 +52,34 @@ main {
 
 
 /* ### side bar */
-aside .btn {border-radius: 5px; display: inline-block; width: auto; margin: 10px;}
-.login-buttons {
+aside .login-buttons {
   text-align: center;
   background-color: #e9ecef;
   padding: 1rem;
   margin-bottom: 2rem;
 }
+aside .login-buttons .btn {
+  border-radius: 5px;
+  display: inline-block;
+  width: auto;
+  margin: 10px;
+}
+
 #Form_ProfileForm_Password_Holder .d-none {display: block!important;}
+
+/* ### footer */
+.sharethis  {margin-top: 2rem;}
+.sharethis i {font-size: 1.7rem; margin: 0 0.3rem; }
+.sharethis i:hover {color: #dc3d24;}
+
+.event-calendar-events-list .dates-and-regions {
+  line-height: 2;
+}
+.event-calendar-events-list .dates-and-regions a {
+  background-color: #e9ecef;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 0 1rem;
+  color: #000;
+  margin: 5px 0;
+}

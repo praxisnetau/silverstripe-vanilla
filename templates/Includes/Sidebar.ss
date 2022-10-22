@@ -22,4 +22,6 @@
 
   <% include UncleCheese\EventCalendar\Includes\CalendarNav %>
 
+  <% include ShareThis %>
+
 </aside>

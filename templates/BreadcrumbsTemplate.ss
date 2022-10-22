@@ -1,4 +1,4 @@
-<div class="website-title"><i class="fa-solid fa-car-side-bolt"></i>$SiteConfig.Title - $SiteConfig.Tagline</div>
+<div class="website-title">$SiteConfig.Title <br /><span>$SiteConfig.Tagline</span></div>
 <% if $IsNotTopLevelPage %>
 <% if $Pages %>
   <nav aria-label="breadcrumb" role="navigation">

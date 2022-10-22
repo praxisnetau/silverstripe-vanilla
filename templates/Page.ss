@@ -4,7 +4,7 @@
   <head>
     $MetaTagsExtended
     <% require themedCSS('production/styles/bundle') %>
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
     <%-- require css('http://localhost:8080/production/styles/bundle.css') --%>
   </head>
   <body>
