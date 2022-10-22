@@ -4,8 +4,18 @@
 	<h3 class="summary">$Title</h3>
 
 	<% with CurrentDate %>
-		<p class="event-dates">$DateRange<% if AllDay %> <% _t('UncleCheese\EventCalendar\Pages\Calendar.ALLDAY','All Day') %><% else %><% if StartTime %> $TimeRange<% end_if %><% end_if %></p>
-		<p><a href="$ICSLink" class="event-ics-link"><% _t('UncleCheese\EventCalendar\Pages\CalendarEvent.ADD','Add this to Calendar') %></a></p>
+		<p class="dates-and-regions">
+      <a href="$ICSLink">
+        $DateRange<% if AllDay %> <% _t('UncleCheese\EventCalendar\Pages\Calendar.ALLDAY','All Day') %><% else %><% if StartTime %> $TimeRange<% end_if %><% end_if %>
+      </a>
+      <% with $Event %>
+        <% if $Regions %>
+          <% loop $Regions %>
+          <a href="$Link">$Title</a>
+          <% end_loop %>
+        <% end_if %>
+      <% end_with %>
+    </p>
 	<% end_with %>
 
 	$Content

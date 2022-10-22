@@ -8,10 +8,17 @@
     <%-- require css('http://localhost:8080/production/styles/bundle.css') --%>
   </head>
   <body>
+
     <% include Header %>
+
     <% include Layout Layout=$Layout %>
+
     <% include Footer %>
     <% require themedJavascript('production/js/bundle') %>
     <%-- require javascript('http://localhost:8080/production/js/bundle.js') --%>
+    <% if $IsAdmin %>
+    <a href="$CMSEditLink" class="btn btn-danger" role="button">Edit this page</a>
+    <% end_if %>
+
   </body>
 </html>

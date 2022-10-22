@@ -3,7 +3,7 @@
         <li class="vevent clearfix">
             <h3 class="summary"><% if Announcement %>$Title<% else %><a class="url" href="$Link">$Event.Title</a><% end_if %></h3>
             <p class="dates-and-regions">
-              <a>
+              <a href="$ICSLink">
                 $DateRange
                 <% if AllDay %> <% _t('UncleCheese\EventCalendar\Pages\Calendar.ALLDAY','All Day') %>
                 <% else %>

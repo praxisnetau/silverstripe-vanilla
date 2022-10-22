@@ -40,7 +40,7 @@ body > header:first-child .navbar-brand {
 }
 .website-title span {
   display: block;
-  font-size: 1rem;
+  font-size: calc(0.5rem + 0.47vw);
   border-top: 1px solid white;
   width: 320px;
   margin: 0 auto;
@@ -55,7 +55,7 @@ main {
 aside .login-buttons {
   text-align: center;
   background-color: #e9ecef;
-  padding: 1rem;
+  padding: 0.2rem;
   margin-bottom: 2rem;
 }
 aside .login-buttons .btn {
@@ -63,23 +63,87 @@ aside .login-buttons .btn {
   display: inline-block;
   width: auto;
   margin: 10px;
+  color: #fff;
+}
+aside ul,
+aside li {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
 }
 
-#Form_ProfileForm_Password_Holder .d-none {display: block!important;}
 
 /* ### footer */
 .sharethis  {margin-top: 2rem;}
 .sharethis i {font-size: 1.7rem; margin: 0 0.3rem; }
 .sharethis i:hover {color: #dc3d24;}
 
-.event-calendar-events-list .dates-and-regions {
+.event-calendar-events-list ul,
+.event-calendar-events-list li {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.event-calendar-events-list li {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 3rem;
+}
+.dates-and-regions {
   line-height: 2;
 }
-.event-calendar-events-list .dates-and-regions a {
+.dates-and-regions a {
   background-color: #e9ecef;
   border-radius: 10px;
   display: inline-block;
   padding: 0 1rem;
   color: #000;
   margin: 5px 0;
+}
+
+
+.event-calendar-month-jumper .fields {width: 80%!important; float: left;}
+.event-calendar-month-jumper .field.dropdown {width: calc(50% - 10px)!important; float: left; margin-right: 10px; }
+.event-calendar-month-jumper .actions {width: 19%!important; display: inline-block;}
+.event-calendar-feed {font-size: 0.7rem; clear: both;}
+
+.blog-post-meta {
+  font-size: 0.7rem;
+}
+.blog-post-meta a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.userform input,
+.userform select,
+.userform textarea
+{
+  width: 100%;
+}
+.userform .Actions {
+  padding-top: 2rem;
+}
+
+.userform .Actions input {
+  display: inline-block;
+  width: auto;
+}
+
+.col-md-9 form {
+  margin: 10px auto!important;
+  background-color: #e9ecef;
+  padding: 2rem calc(100% - 600px);
+}
+
+
+.post-image {
+  max-width: 320px;
+  float: right;
+}
+.post-image img {
+  max-width: 320px;
+  height: auto;
+}
+.post-summary h2 {
+  clear: both;
 }
