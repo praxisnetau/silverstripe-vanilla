@@ -1,5 +1,5 @@
 // ID of the Google Spreadsheet
-const spreadsheetID='AIzaSyDtRoZA6wazwP5cIdwkE7MqGOgksYR2LoY'
+
 
 // Make sure it is public or set to Anyone with link can view
 const url='https://sheets.googleapis.com/v4/spreadsheets/1Yg6XsC5k4eF0zYxteOPqtk5Bfjgh3kvU26LbN_I_NNk/values/Dealers!A1:M1000?key=' + spreadsheetID
