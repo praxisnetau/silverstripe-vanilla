@@ -1,7 +1,6 @@
 
 
 $Content
-$ElementalArea
 
 <h2 class="event-calendar-dateheader">$DateHeader</h2>
 <% if $Events %>

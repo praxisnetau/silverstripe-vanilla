@@ -28,7 +28,8 @@
     "expose": [
       "production",
       "css",
-      "images"
+      "images",
+      "js"
     ]
   },
   "minimum-stability": "dev",
