@@ -147,3 +147,7 @@ aside li {
 .post-summary h2 {
   clear: both;
 }
+
+main .col-md-9 {
+  padding-right: 5rem;
+}
