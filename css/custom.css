@@ -151,3 +151,31 @@ aside li {
 main .col-md-9 {
   padding-right: 5rem;
 }
+
+.search {
+  padding-bottom: 1rem;
+}
+.searchResultsHeader {
+  font-size: 1rem;
+}
+.searchEngineResultItem {
+  position: relative;
+  margin-left: 1.6rem;
+}
+#SearchEngineBasicForm_SearchEngineBasicForm_SearchEngineKeywords_Holder label{
+  display: none;
+}
+
+#SearchEngineBasicForm_SearchEngineBasicForm {
+  position: relative;
+}
+#SearchEngineBasicForm_SearchEngineBasicForm .actions {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.dealertitle {
+  padding-top: 3rem;
+  list-style: none;
+}

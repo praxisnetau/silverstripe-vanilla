@@ -1,4 +1,5 @@
 <aside class="col-md-3 sidebar">
+  <h3>Membership</h3>
   <p class="login-buttons">
     <% if $IsCurrentUser %>
     <a href="$RegisterLink" class="btn btn-primary" role="button">My Details</a>
@@ -8,6 +9,11 @@
     <a href="$LoginLink" class="btn btn-secondary" role="button">Log in</a>
     <% end_if %>
   </p>
+
+  <div class="search">
+    <h3>Search our site</h3>
+    $SearchEngineBasicForm
+  </div>
 
   <% if $Menu(2) %>
     <nav class="secondary">

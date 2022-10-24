@@ -2,7 +2,7 @@
 
 <html class="no-js" lang="$ContentLocale">
   <head>
-    $MetaTagsExtended
+    $ExtendedMetatags
     <% require themedCSS('production/styles/bundle') %>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
     <%-- require css('http://localhost:8080/production/styles/bundle.css') --%>
