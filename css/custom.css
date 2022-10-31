@@ -179,3 +179,5 @@ main .col-md-9 {
   padding-top: 3rem;
   list-style: none;
 }
+
+.pagination span, .pagination a {display: inline-block; padding: 0 5px;}
