@@ -1,6 +1,6 @@
 <div class="sharethis">
   <hr />
-  <h3>JOIN US</h3>
+  <h3>FOLLOW US</h3>
   <% with Siteconfig %>
   <p>
     <% if $FacebookLink %><a href="$FacebookLink" ><i class="fa-brands fa-facebook"></i></a><% end_if %>
