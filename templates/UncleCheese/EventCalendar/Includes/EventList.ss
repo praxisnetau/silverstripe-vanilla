@@ -1,7 +1,8 @@
 <ul>
     <% loop $Events %>
-        <li class="vevent clearfix">
+        <li class="vevent clearfix" style="clear: both;">
             <h3 class="summary"><% if Announcement %>$Title<% else %><a class="url" href="$Link">$Event.Title</a><% end_if %></h3>
+            <% if $Event.EventImage %><img src="$Event.EventImage.ScaleWidth(200).Link" style="float: left; margin: 0px 10px 10px 0" /><% end_if %>
             <p class="dates-and-regions">
               <a href="$ICSLink">
                 $DateRange
@@ -10,7 +11,6 @@
                         <% if $StartTime %> $TimeRange<% end_if %>
                 <% end_if %>
               </a>
-
               <% with $Event %>
                 <% if $Regions %>
                   <% loop $Regions %>
