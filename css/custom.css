@@ -1,5 +1,9 @@
 /* generic */
 
+body {
+  overflow-x: hidden;
+}
+
 a {color: #dc3d24;}
 
 
@@ -190,4 +194,11 @@ main .col-md-9 {
 
 .content img {
   max-width: 100%!important;
+}
+
+.btn-primary,
+.btn-primary
+ {
+  background-color: #dc3d24!important;
+  border-color: #dc3d24!important;
 }
