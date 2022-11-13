@@ -190,4 +190,5 @@ main .col-md-9 {
 
 .content img {
   max-width: 100%!important;
+  height: auto!important;
 }
