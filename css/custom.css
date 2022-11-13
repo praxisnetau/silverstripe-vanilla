@@ -187,10 +187,10 @@ main .col-md-9 {
 .pagination span, .pagination a {display: inline-block; padding: 0 5px;}
 
 
-#mailchimp-signup-form .form-group {display: none;}
+/* #mailchimp-signup-form .form-group {display: none;}
 #mailchimp-signup-form #mailchimp-signup-form_EMAIL_Holder {display: block;}
 #mailchimp-signup-form #mailchimp-signup-form_FNAME_Holder {display: block;}
-#mailchimp-signup-form #mailchimp-signup-form_LNAME_Holder {display: block;}
+#mailchimp-signup-form #mailchimp-signup-form_LNAME_Holder {display: block;} */
 
 .content img {
   max-width: 100%!important;
