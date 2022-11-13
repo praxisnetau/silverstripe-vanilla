@@ -9,11 +9,36 @@
   </head>
   <body>
 
-    <% include Header %>
+    <% if $HasCacheKeyHeader %>
+        <!-- cached -->
+        <% cached $CacheKeyHeader(1) %>
+            <% include Header %>
+        <% end_cached %>
+    <% else %>
+        <!-- uncached -->
+        <% include Header %>
+    <% end_if %>
 
-    <% include Layout Layout=$Layout %>
+    <% if $HasCacheKeyContent %>
+        <!-- cached -->
+        <% cached $CacheKeyContent %>
+            <% include Layout Layout=$Layout %>
+        <% end_cached %>
+    <% else %>
+        <!-- uncached -->
+        <% include Layout Layout=$Layout %>
+    <% end_if %>
 
-    <% include Footer %>
+
+    <% if $HasCacheKeyFooter %>
+        <!-- cached -->
+        <% cached $CacheKeyFooter(0) %>
+            <% include Footer %>
+        <% end_cached %>
+    <% else %>
+        <!-- uncached -->
+        <% include Footer %>
+    <% end_if %>
     <% require themedJavascript('production/js/bundle') %>
     <%-- require javascript('http://localhost:8080/production/js/bundle.js') --%>
     <% if $IsAdmin %>
