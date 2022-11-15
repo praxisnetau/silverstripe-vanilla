@@ -19,11 +19,11 @@
   <% include ShareThis %>
   <% include JoinUs %>
 
-  <h3>Members and Editors</h3>
+  <h3>Editors</h3>
   <p class="login-buttons">
     <% if $IsCurrentUser %>
-    <a href="$RegisterLink" class="btn btn-primary" role="button">My Details</a>
-    <a href="$LogoutLink" class="btn btn-primary" role="button">Log out</a>
+    <a href="$RegisterLink">My Details</a>
+    <a href="$LogoutLink">Log out</a>
     <% else %>
     <a href="$LoginLink" class="btn btn-secondary" role="button">Log in</a>
     <% end_if %>

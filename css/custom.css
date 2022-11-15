@@ -57,10 +57,10 @@ main {
 
 /* ### side bar */
 aside .login-buttons {
-  text-align: center;
-  background-color: #e9ecef;
-  padding: 0.2rem;
+  text-align: left;
+  padding: 0;
   margin-bottom: 2rem;
+  margin-top: -1rem;
 }
 aside .login-buttons .btn {
   border-radius: 5px;
@@ -68,6 +68,9 @@ aside .login-buttons .btn {
   width: auto;
   margin: 10px;
   color: #fff;
+}
+aside .login-buttons .btn:first-child {
+  margin-left: 0;
 }
 aside ul,
 aside li {
@@ -133,6 +136,11 @@ aside li {
   width: auto;
 }
 
+.col-lg-9,
+.col-md-9 {
+  padding-right: 7%;
+}
+
 .col-md-9 form {
   margin: 10px auto!important;
   background-color: #e9ecef;
@@ -147,6 +155,10 @@ aside li {
 .post-image img {
   max-width: 320px;
   height: auto;
+}
+.post-summary {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 .post-summary h2 {
   clear: both;
@@ -202,4 +214,16 @@ main .col-md-9 {
  {
   background-color: #dc3d24!important;
   border-color: #dc3d24!important;
+}
+
+.searchEnginePageInfo a:link,
+.searchEnginePageInfo a:visited
+ {
+  color: #000;
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.searchEnginePageInfo a.current {
+  color: #dc3d24;
 }
