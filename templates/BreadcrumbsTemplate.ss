@@ -1,7 +1,7 @@
 <div class="website-title">$SiteConfig.Title <br /><span>$SiteConfig.Tagline</span></div>
 <% if $IsNotTopLevelPage %>
 <% if $Pages %>
-  <nav aria-label="breadcrumb" role="navigation">
+  <nav aria-label="breadcrumb" role="navigation" class="breadcrumb-holder">
     <ol class="breadcrumb">
       <% loop $Pages %>
         <% if $Last %>
