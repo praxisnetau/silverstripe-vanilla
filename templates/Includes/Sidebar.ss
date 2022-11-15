@@ -1,7 +1,6 @@
 <aside class="col-md-3 sidebar">
 
   <div class="search">
-    <h3>Search our site</h3>
     $SearchEngineBasicForm
   </div>
 
