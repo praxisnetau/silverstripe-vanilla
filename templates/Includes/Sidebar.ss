@@ -21,8 +21,8 @@
   <h3>Editors</h3>
   <p class="login-buttons">
     <% if $IsCurrentUser %>
-    <a href="$RegisterLink">My Details</a>
-    <a href="$LogoutLink">Log out</a>
+    <a href="$RegisterLink" class="btn btn-secondary" role="button">My Details</a>
+    <a href="$LogoutLink" class="btn btn-secondary" role="button">Log out</a>
     <% else %>
     <a href="$LoginLink" class="btn btn-secondary" role="button">Log in</a>
     <% end_if %>
