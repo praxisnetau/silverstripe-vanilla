@@ -1,4 +1,4 @@
-<aside class="col-md-3 sidebar">
+<aside class="col-lg-3 sidebar">
 
   <div class="search">
     <h3>Search our site</h3>
