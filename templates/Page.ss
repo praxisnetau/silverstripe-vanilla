@@ -5,40 +5,23 @@
     $ExtendedMetatags
     <% require themedCSS('production/styles/bundle') %>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+    <script async src=https://www.googletagmanager.com/gtag/js?id=G-RNQZLSEB0X></script>
+    <script>
+window.dataLayer = window.dataLayer || []
+function gtag () {
+  window.dataLayer.push(arguments)
+}
+gtag('js', new Date()); gtag('config', 'G-RNQZLSEB0X')
+    </script>
     <%-- require css('http://localhost:8080/production/styles/bundle.css') --%>
   </head>
   <body>
 
-    <% if $HasCacheKeyHeader %>
-        <!-- cached -->
-        <% cached $CacheKeyHeader(1) %>
-            <% include Header %>
-        <% end_cached %>
-    <% else %>
-        <!-- uncached -->
-        <% include Header %>
-    <% end_if %>
+    <% include Header %>
 
-    <% if $HasCacheKeyContent %>
-        <!-- cached -->
-        <% cached $CacheKeyContent %>
-            <% include Layout Layout=$Layout %>
-        <% end_cached %>
-    <% else %>
-        <!-- uncached -->
-        <% include Layout Layout=$Layout %>
-    <% end_if %>
+    <% include Layout Layout=$Layout %>
 
-
-    <% if $HasCacheKeyFooter %>
-        <!-- cached -->
-        <% cached $CacheKeyFooter(0) %>
-            <% include Footer %>
-        <% end_cached %>
-    <% else %>
-        <!-- uncached -->
-        <% include Footer %>
-    <% end_if %>
+    <% include Footer %>
     <% require themedJavascript('production/js/bundle') %>
     <%-- require javascript('http://localhost:8080/production/js/bundle.js') --%>
     <% if $IsAdmin %>

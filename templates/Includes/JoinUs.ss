@@ -1,6 +1,7 @@
 <div class="sharethis">
   <hr />
   <h3>FOLLOW US</h3>
+
   <% with Siteconfig %>
   <p>
     <% if $FacebookLink %><a href="$FacebookLink" ><i class="fa-brands fa-facebook"></i></a><% end_if %>
@@ -12,6 +13,6 @@
   </p>
   <% end_with %>
   <p class="login-buttons">
-  <a href="$JoinUsLink" class="btn btn-primary" role="button">Newsletter Sign-up</a>
+    <a href="$JoinUsLink" class="btn btn-secondary" role="button">Sign-up to Newsletter</a>
   </p>
 </div>
