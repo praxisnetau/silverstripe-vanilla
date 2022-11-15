@@ -11,8 +11,8 @@
     <% if $YouTubeLink %><a href="$YouTubeLink" ><i class="fa-brands fa-youtube"></i></a><% end_if %>
     <% if $VimeoLink %><a href="$VimeoLink" ><i class="fa-brands fa-vimeo"></i></a><% end_if %>
   </p>
+  <% end_with %>
   <p class="login-buttons">
   <a href="$JoinUsLink" class="btn btn-secondary" role="button">Newsletter Sign-up</a>
   </p>
-  <% end_with %>
 </div>
