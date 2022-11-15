@@ -232,3 +232,8 @@ main .col-md-9 {
 .searchEnginePageInfo a.current {
   color: #dc3d24;
 }
+
+form .message.required {
+  background-color: rebeccapurple;
+  color: wheat;
+}
