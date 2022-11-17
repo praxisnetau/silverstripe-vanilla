@@ -156,14 +156,17 @@ aside li {
 .post-image {
   max-width: 320px;
   float: right;
+  margin-left: 20px;
 }
+
 .post-image img {
   max-width: 320px;
   height: auto;
 }
 .post-summary {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  clear: both;
 }
 .post-summary h2 {
   clear: both;
