@@ -5,6 +5,7 @@
     </header>
     <div class="content">
       $Content
+      $CustomHTML.Raw
     </div>
     <% if $Form %>
       <div class="form">
