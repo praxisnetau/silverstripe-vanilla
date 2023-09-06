@@ -15,6 +15,11 @@
         </div>
       </div>
       <div class="col-md">
+       <% if $SiteConfig.FooterAuthorisation %>
+          <div class="d-flex flex-column align-items-center align-items-lg-stretch justify-content-lg-end flex-lg-row">
+            <div class="authorisation">$SiteConfig.FooterAuthorisation</div>
+          </div>
+        <% end_if %>
         <div class="footer-credits d-flex flex-column align-items-center align-items-lg-stretch justify-content-lg-end flex-lg-row">
           <div class="theme">
             Theme by Praxis Interactive
